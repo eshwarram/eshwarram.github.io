@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Eshwar Ram Arunachaleswaran</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <!-- Retro 90s video game style with modern twist -->
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #00ffcc;
+      font-family: 'Press Start 2P', cursive; /* Retro font for headings */
+      font-family: 'Oswald', sans-serif; /* Modern font for body text */
+      padding: 20px;
+    }
+    
+    .navbar {
+      background-color: #ff5733;
+      border: 2px solid #ffffff;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .navbar a {
+      color: #00ffcc !important;
+      text-transform: uppercase;
+    }
+
+    .container {
+      border: 3px solid #ff5733;
+      background-color: #1a1a1a;
+      padding: 20px;
+    }
+
+    .row {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #ffdd00;
+      text-transform: uppercase;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffdd00;
+    }
+
+    .img-responsive {
+      border: 3px solid #ff5733;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background-color: #333333;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 2px solid #ff5733;
+    }
+
+    ul li a {
+      color: #00ffcc;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .sidebar h3 {
+      color: #ffdd00;
+    }
+
+    .sidebar {
+      background-color: #333333;
+      padding: 10px;
+      border: 3px solid #ff5733;
+    }
+
+    /* Adding pixelated effect for headings */
+    h2, h3 {
+      text-shadow: 2px 2px 0px #ff5733, 3px 3px 0px #ffffff;
+    }
+  </style>
+
+  <!-- Google fonts for retro and modern fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Oswald:700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="Eshwar_CV.pdf">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="container">
+    <div class="row">
+      <!-- Main Section -->
+      <div class="col-md-8">
+        <!-- Main Image -->
+        <img class="img-responsive" src="me.jpg" width="30%" alt="Eshwar Ram Arunachaleswaran"><br>
+
+        <div style="text-align: justify; color: #ffffff;">
+          <p>Hi, I’m Eshwar. I’m a PhD student in the <a href="https://theory.cis.upenn.edu/">Department of Computer and Information Science</a> at the University of Pennsylvania. I'm fortunate to be advised by <a href="https://www.cis.upenn.edu/~kannan/">Sampath Kannan</a> and <a href="https://www.seas.upenn.edu/~anindyad/">Anindya De</a>.</p>
+          
+          <p>I work in theoretical computer science and am interested in algorithms and complexity, particularly algorithmic game theory, learning theory, online algorithms, and algorithmic fairness. I'm currently visiting the Simons Institute for the Theory of Computing at UC Berkeley, as part of the program <a href="https://simons.berkeley.edu/programs/special-year-large-language-models-transformers-part-1">Special Year on Large Language Models and Transformers: Part 1</a>.</p>
+
+          <p>My research was supported in the past by <a href="https://www.amazon.science/news-and-features/amazon-provides-gift-to-10-penn-engineering-phd-students-for-work-on-trustworthy-ai">a gift from AWS AI for research in Trustworthy AI</a>.</p>
+        </div>
+      </div>
+
+      <!-- Sidebar Section -->
+      <div class="col-md-4 sidebar">
+        <h3>Eshwar Ram Arunachaleswaran</h3>
+        <p><b>eshwar at seas.upenn.edu</b><br>
+          Department of Computer and Information Science<br>
+          University of Pennsylvania
+        </p>
+        <br>
+        <dd><a href="https://scholar.google.com/citations?user=aXBGOt4AAAAJ&hl=en&oi=ao">Google Scholar</a></dd>
+      </div>
+    </div>
+
+    <!-- Publications Section -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 id="publications">Publications</h2>
+        <ul>
+          <li><a href="https://arxiv.org/abs/2402.09549">Pareto-Optimal Algorithms for Learning in Games</a><br>
+            <b>ACM Conference on Economics and Computation (EC) 2024</b><br>
+            Eshwar Ram Arunachaleswaran, Natalie Collina, Jon Schneider
+          </li>
+          <li><a href="https://arxiv.org/abs/2310.04652">Oracle Efficient Algorithms for Groupwise Regret</a><br>
+            <b>ICLR 24</b><br>
+            Krishna Acharya, Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani
+          </li>
+          <!-- Add more publications as needed -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Working Papers Section -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Working Papers</h2>
+        <ul>
+          <li><a href="https://arxiv.org/abs/2402.11410">An Elementary Predictor Obtaining 2 &radic;<span style="text-decoration:overline;">T</span> Distance to Calibration</a><br>
+            Eshwar Ram Arunachaleswaran, Natalie Collina, Aaron Roth, Mirah Shi
+          </li>
+          <li><a href="https://www.arxiv.org/abs/2409.03956">Algorithmic Collusion Without Threats</a><br>
+            Eshwar Ram Arunachaleswaran, Natalie Collina, Sampath Kannan, Aaron Roth, Juba Ziani
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="text-align: center; color: #b5bec9; font-size: 0.8em;">
+    <a href="https://github.com/mavroudisv/plain-academic" style="color: #b5bec9;">Powered by Plain Academic</a>
+  </footer>
+
+</body>
+</html>

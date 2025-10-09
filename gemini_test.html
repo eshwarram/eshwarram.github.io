@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eshwar Ram Arunachaleswaran</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.7;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
+            padding: 5rem 0;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .profile-img-header {
+            width: 180px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            margin-bottom: 1rem;
+        }
+        .header-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .header-subtitle {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .container {
+            max-width: 1100px;
+        }
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            color: #005eC7;
+            border-bottom: 2px solid #005eC7;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            margin-top: 2rem;
+        }
+        .sidebar {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        .sidebar h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 0.5rem;
+        }
+        .sidebar p, .sidebar li {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .sidebar a {
+            color: #007bff;
+        }
+        .nav-icons a {
+            display: inline-block;
+            margin: 0 8px;
+            color: #555;
+            font-size: 1.2rem;
+        }
+        .nav-icons a:hover {
+            color: #007bff;
+        }
+        .publication-section {
+            margin-bottom: 30px;
+        }
+        .publication-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
+        }
+        .publication-list {
+            padding-left: 0;
+            list-style: none;
+        }
+        .publication-list li {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #ddd;
+        }
+        .publication-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .publication-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        .publication-icon {
+            margin-right: 15px;
+            color: #007bff;
+            font-size: 1.4rem;
+            width: 25px;
+            text-align: center;
+            display: none; /* Paper icons are now hidden */
+        }
+        .publication-content {
+            flex-grow: 1;
+        }
+        .publication-title {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
+        }
+        .publication-details {
+            font-size: 0.95rem;
+            color: #777;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .publication-details strong {
+            font-weight: bold;
+            color: #555;
+        }
+        .publication-venue {
+            font-style: italic;
+            color: #555;
+        }
+        .publication-authors {
+            color: #666;
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-bg">
+        <img src="me.png" class="profile-img-header" alt="Profile Picture">
+        <h1 class="header-title">Eshwar Ram Arunachaleswaran</h1>
+        <p class="header-subtitle">PhD Student in Computer Science</p>
+        <div class="nav-icons">
+            <a href="mailto:eshwar@seas.upenn.edu"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://scholar.google.com/citations?user=aXBGOt4AAAAJ&hl=en&oi=ao"><i class="fab fa-google-scholar"></i></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <section id="about">
+                    <h2 class="section-title">About Me</h2>
+                    <p style="text-align: justify;">
+                        Hi, I’m Eshwar. I’m a PhD student in the <a href="https://theory.cis.upenn.edu/">Department of Computer and Information Science</a> at the University of Pennsylvania.
+                        I'm fortunate to be advised by <a href="https://www.cis.upenn.edu/~kannan/">Sampath Kannan</a> and <a href="https://www.seas.upenn.edu/~anindyad/">Anindya De</a>.
+                    </p>
+                    <p style="text-align: justify;">
+                        I work in theoretical computer science and am interested in algorithms and complexity, particularly algorithmic game theory, online learning and the theory of multi-agent learning.
+                    </p><p>
+                        Currently, I’m visiting the Simons Institute for the Theory of Computing at UC Berkeley, participating in the <a href="https://simons.berkeley.edu/programs/special-year-large-language-models-transformers-part-1">Special Year on Large Language Models and Transformers</a>.
+                    </p>
+                    <p style="text-align: justify;">
+                        My research was previously supported by <a href="https://www.amazon.science/news-and-features/amazon-provides-gift-to-10-penn-engineering-phd-students-for-work-on-trustworthy-ai">a gift from AWS AI for research in Trustworthy AI</a>.
+                    </p>
+                </section>
+
+                <section id="publications">
+                    <h2 class="section-title">Publications</h2>
+
+                    <section class="publication-section">
+                        <h3>Online Learning and Repeated Games</h3>
+                        <div class="publication-block">
+                            <ul class="publication-list">
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/2502.20229">Swap Regret and Correlated Equilibria Beyond Normal-Form Games
+                                            </a></span>
+                                            <span class="publication-details"><span class="publication-venue">Working Paper 2025</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Jon Schneider</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/2412.18297">Learning to Play Against Unknown Opponents</a></span>
+                                            <span class="publication-details"><span class="publication-venue">Working Paper 2025</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Jon Schneider</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://www.arxiv.org/abs/2409.03956">Algorithmic Collusion Without Threats</a></span>
+                                            <span class="publication-details"><span class="publication-venue">ITCS 2025</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Sampath Kannan, Aaron Roth, Juba Ziani</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/2402.11410">An Elementary Predictor Obtaining 2 <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">&nbsp;T &nbsp;</span></span> Distance to Calibration</a></span>
+                                            <span class="publication-details"><span class="publication-venue">SODA 2025</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Aaron Roth, Mirah Shi</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/2402.09549">Pareto-Optimal Algorithms for Learning in Games</a></span>
+                                            <span class="publication-details"><span class="publication-venue">EC 2024</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Jon Schneider</span><br><a href="pareto_slides.pdf">Talk Slides</a></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/2207.04192">Efficient Stackelberg Strategies for Finitely Repeated Games</a></span>
+                                            <span class="publication-details"><span class="publication-venue">AAMAS 2023</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Michael Kearns</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="publication-section">
+                        <h3>Algorithmic Fairness and Machine Learning</h3>
+                        <div class="publication-block">
+                            <ul class="publication-list">
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/2310.04652">Oracle Efficient Algorithms for Groupwise Regret</a></span>
+                                            <span class="publication-details"><span class="publication-venue">ICLR 2024</span><br><span class="publication-authors">Krishna Acharya, Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/2209.07375">Wealth Dynamics Over Generations: Analysis and Interventions</a></span>
+                                            <span class="publication-details"><span class="publication-venue">SATML 2023</span><br><span class="publication-authors">Krishna Acharya, Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/2002.06592">Pipeline Interventions</a></span>
+                                            <span class="publication-details"><span class="publication-venue">ITCS 2021, Mathematics of Operations Research</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="publication-section">
+                        <h3>Fair Division and Equilibrium Computation</h3>
+                        <div class="publication-block">
+                            <ul class="publication-list">
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/1807.04163">Fully polynomial-time approximation schemes for fair rent division</a></span>
+                                            <span class="publication-details"><span class="publication-venue">SODA 2019, Mathematics of Operations Research</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Siddharth Barman, Nidhi Rathi</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/1907.11019">Fair and efficient cake division with connected pieces</a></span>
+                                            <span class="publication-details"><span class="publication-venue">WINE 2019</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Siddharth Barman, Rachitesh Kumar, Nidhi Rathi</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/1811.10859">Fair Division with a Secretive Agent</a></span>
+                                            <span class="publication-details"><span class="publication-venue">AAAI 2019</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Siddharth Barman, Nidhi Rathi</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="publication-section">
+                        <h3>Other Topics</h3>
+                        <div class="publication-block">
+                            <ul class="publication-list">
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="https://arxiv.org/abs/2206.07672">Reconstructing Ultrametric Trees from Noisy Experiments</a></span>
+                                            <span class="publication-details"><span class="publication-venue">ALT 2023</span><br><span class="publication-authors">Eshwar Ram Arunachaleswaran, Anindya De, Sampath Kannan</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="publication-section">
+                        <h3>Miscellaneous</h3>
+                        <div class="publication-block">
+                            <ul class="publication-list">
+                                <li>
+                                    <div class="publication-item">
+                                        <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                                        <div class="publication-content">
+                                            <span class="publication-title"><a href="WPE II Report_Eshwar.pdf">Report on Prophet Inequalities with Limited Information</a></span>
+                                            <span class="publication-details"><span class="publication-details">For PhD Qualifiers [<a href="wpe_ii_presentation final.pdf">Talk Slides</a>]</span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+            </div>
+
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <h2>Contact</h2>
+                    <p><strong>Email:</strong> <a href="mailto:eshwar@seas.upenn.edu">eshwar at seas.upenn.edu</a></p>
+                    <p><strong>Department:</strong> Computer and Information Science</p>
+                    <p><strong>Institution:</strong> University of Pennsylvania</p>
+                    <h2>Links</h2>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><a href="cv.pdf"><i class="fas fa-file-pdf"></i> CV</a></li>
+                        <li><a href="https://scholar.google.com/citations?user=aXBGOt4AAAAJ&hl=en&oi=ao"><i class="fab fa-google-scholar"></i> Google Scholar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Eshwar Ram Arunachaleswaran</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
