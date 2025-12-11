@@ -14,26 +14,39 @@
   <style>
     body {
       font-family: 'Lora', serif;
-      background: linear-gradient(to right, #f2f2f2, #d9e7ff);
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #f0f2f5 100%);
       padding-top: 50px;
+      color: #2c3e50;
     }
     h2 {
       font-family: 'Oswald', sans-serif;
       font-size: 36px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       text-transform: uppercase;
-      color: #333;
+      color: #1a202c;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    h3 {
+      font-family: 'Oswald', sans-serif;
+      color: #2c3e50;
+      font-weight: 600;
+      letter-spacing: 0.3px;
     }
     p, li {
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
     }
     a {
-      color: #337ab7;
+      color: #2563eb;
       text-decoration: none;
+      transition: color 0.2s ease, border-bottom 0.2s ease;
+      border-bottom: 1px solid transparent;
     }
     a:hover {
-      color: #23527c;
+      color: #1d4ed8;
+      border-bottom: 1px solid #1d4ed8;
     }
     .navbar-inverse {
       background-color: #2c3e50;
@@ -51,16 +64,18 @@
     }
     img {
       border-radius: 50%;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.08);
+      border: 3px solid #ffffff;
     }
     #publications ul {
       padding-left: 20px;
     }
     .sidebar {
-      background-color: #f8f9fa;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.06);
     }
     .footer {
       text-align: center;
@@ -76,6 +91,7 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
+        <a class="navbar-brand" href="index.html" style="color: #ecf0f1; font-family: 'Oswald', sans-serif; font-size: 24px; font-weight: 700;">ERA</a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -99,12 +115,17 @@
       <!-- Main Section -->
       <div class="col-md-8">
         <img class="img-responsive" src="me.png" width="30%" alt="Profile Picture">
-        <p style="margin-top: 20px; text-align: justify;">
-          Hi, I’m Eshwar. I’m a PhD student in the <a href="https://theory.cis.upenn.edu/">Department of Computer and Information Science</a> at the University of Pennsylvania.
-          I'm fortunate to be advised by <a href="https://www.cis.upenn.edu/~kannan/">Sampath Kannan</a> and <a href="https://www.seas.upenn.edu/~anindyad/">Anindya De</a>.
-        </p>
-        <p style="text-align: justify;">
-          I work in theoretical computer science and am interested in algorithms and complexity, particularly algorithmic game theory, learning theory, online algorithms, and algorithmic fairness. Currently, I’m visiting the Simons Institute for the Theory of Computing at UC Berkeley, participating in the <a href="https://simons.berkeley.edu/programs/special-year-large-language-models-transformers-part-1">Special Year on Large Language Models and Transformers: Part 1</a>.
+        <div style="margin-top: 24px; padding: 20px; background-color: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);">
+          <h3 style="margin-top: 0; margin-bottom: 16px; font-family: 'Oswald', sans-serif; color: #1a202c; font-weight: 600;">Highlights:</h3>
+          <ul style="padding-left: 20px; margin-bottom: 0;">
+            <li>Now a Quantitative Associate at <a href="https://sescollc.com/">SESCO Enterprises</a>, researching electricity markets.</li>
+            <li>Completed my PhD in the <a href="https://theory.cis.upenn.edu/">Department of Computer and Information Science</a> at the University of Pennsylvania, advised by <a href="https://www.cis.upenn.edu/~kannan/">Sampath Kannan</a> and <a href="https://www.seas.upenn.edu/~anindyad/">Anindya De</a>.</li>
+            <li>Research covered in <a href="https://www.quantamagazine.org/the-game-theory-of-how-algorithms-can-drive-up-prices-20251022/">Quanta Magazine</a>, reprinted in <a href="https://www.wired.com/story/game-theory-explains-how-algorithms-can-drive-up-prices/">WIRED</a>, and discussed on the <a href="https://podcasts.apple.com/us/podcast/game-theory-algorithms-and-high-prices/id1021340531?i=1000738312590">Quanta Podcast</a>.</li>
+            <li>Best Paper and Best Student Paper, EC 2025, for “Swap Regret and Correlated Equilibria Beyond Normal-Form Games.”</li>
+          </ul>
+        </div>
+        <p style="text-align: justify; margin-top: 15px;">
+          I work in theoretical computer science and am interested in algorithms and complexity, particularly algorithmic game theory, learning theory, online algorithms, and algorithmic fairness. I recently finished a visit to the Simons Institute for the Theory of Computing at UC Berkeley as part of the <a href="https://simons.berkeley.edu/programs/special-year-large-language-models-transformers-part-1">Special Year on Large Language Models and Transformers: Part 1</a>.
         </p>
         <p style="text-align: justify;">
           My research was previously supported by <a href="https://www.amazon.science/news-and-features/amazon-provides-gift-to-10-penn-engineering-phd-students-for-work-on-trustworthy-ai">a gift from AWS AI for research in Trustworthy AI</a>.
@@ -113,11 +134,11 @@
 
       <!-- Updated Sidebar Block with Improved Spacing -->
 <div class="col-md-4">
-  <div class="sidebar" style="padding: 20px; background-color: #f0f0f0; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px;">
-    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; text-align: center; margin-bottom: 15px;">Eshwar Ram Arunachaleswaran</h2>
-    <p><strong>Email:</strong> eshwar at seas.upenn.edu</p>
-    <p><strong>Department:</strong> Computer and Information Science</p>
-    <p><strong>Institution:</strong> University of Pennsylvania</p>
+  <div class="sidebar" style="margin-bottom: 20px;">
+    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; text-align: center; margin-bottom: 20px; color: #1a202c;">Eshwar Ram Arunachaleswaran</h2>
+    <p><strong>Email:</strong> eshwarram.arunachaleswaran@gmail.com</p>
+    <p><strong>Current:</strong> Quantitative Associate, <a href="https://sescollc.com/">SESCO Enterprises</a></p>
+    <p><strong>PhD:</strong> Computer and Information Science, University of Pennsylvania</p>
     <dd><a href="https://scholar.google.com/citations?user=aXBGOt4AAAAJ&hl=en&oi=ao">Google Scholar</a></dd> 
   </div>
 </div>
@@ -125,11 +146,11 @@
 <!-- Publications -->
 <div class="row" id="publications" style="margin-top: 50px;">
   <div class="col-md-12">
-    <h2 style="text-align: left; color: #333; margin-bottom: 40px; text-transform: uppercase; font-family: 'Oswald', sans-serif;">Publications</h2>
+    <h2 style="text-align: left; color: #1a202c; margin-bottom: 40px; text-transform: uppercase; font-family: 'Oswald', sans-serif; font-weight: 700;">Publications</h2>
     
     <!-- Online Learning and Repeated Games Section -->
-    <h3 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 30px; color: #2c3e50; font-family: 'Oswald', sans-serif;">Online Learning and Repeated Games</h3>
-    <div style="margin-bottom: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 8px;">
+    <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Online Learning and Repeated Games</h3>
+    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
       <ul>
         <li>
           <a href="https://arxiv.org/abs/2206.07672">Swap Regret and Correlated Equilibria Beyond Normal-Form Games</a><br>
@@ -168,8 +189,8 @@
     </div>
 
     <!-- Algorithmic Fairness and Machine Learning Section -->
-    <h3 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 30px; color: #2c3e50; font-family: 'Oswald', sans-serif;">Algorithmic Fairness and Machine Learning</h3>
-    <div style="margin-bottom: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 8px;">
+    <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Algorithmic Fairness and Machine Learning</h3>
+    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
       <ul>
         <li>
           <a href="https://arxiv.org/abs/2310.04652">Oracle Efficient Algorithms for Groupwise Regret</a><br>
@@ -190,8 +211,8 @@
     </div>
 
     <!-- Fair Division and Equilibrium Computation Section -->
-    <h3 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 30px; color: #2c3e50; font-family: 'Oswald', sans-serif;">Fair Division and Equilibrium Computation</h3>
-    <div style="margin-bottom: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 8px;">
+    <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Fair Division and Equilibrium Computation</h3>
+    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
       <ul>
         <li>
           <a href="https://arxiv.org/abs/1807.04163">Fully polynomial-time approximation schemes for fair rent division</a><br>
@@ -212,8 +233,8 @@
     </div>
 
     <!-- Other Topics Section -->
-    <h3 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 30px; color: #2c3e50; font-family: 'Oswald', sans-serif;">Other Topics</h3>
-    <div style="margin-bottom: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 8px;">
+    <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Other Topics</h3>
+    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
       <ul>
         <li>
           <a href="https://arxiv.org/abs/2206.07672">Reconstructing Ultrametric Trees from Noisy Experiments</a><br>
@@ -224,8 +245,8 @@
     </div>
 
     <!-- Miscellaneous Section -->
-    <h3 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 30px; color: #2c3e50; font-family: 'Oswald', sans-serif;">Miscellaneous</h3>
-    <div style="margin-bottom: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 8px;">
+    <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Miscellaneous</h3>
+    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
       <ul>
         <li>
           <a href="WPE II Report_Eshwar.pdf">Report on Prophet Inequalities with Limited Information</a>  
