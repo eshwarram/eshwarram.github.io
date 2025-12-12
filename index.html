@@ -18,6 +18,18 @@
       padding-top: 50px;
       color: #2c3e50;
     }
+    html {
+      scroll-behavior: smooth;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
     h2 {
       font-family: 'Oswald', sans-serif;
       font-size: 36px;
@@ -48,6 +60,12 @@
       color: #1d4ed8;
       border-bottom: 1px solid #1d4ed8;
     }
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, 0.45);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
     .navbar-inverse {
       background-color: #2c3e50;
       border-color: #2c3e50;
@@ -67,8 +85,104 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.08);
       border: 3px solid #ffffff;
     }
-    #publications ul {
+    .profile-pic {
+      display: block;
+      width: 38%;
+      max-width: 190px;
+      min-width: 140px;
+      height: auto;
+      margin: 0;
+    }
+    @media (max-width: 991px) {
+      .profile-pic {
+        width: 46%;
+        min-width: 150px;
+        margin: 0 auto;
+      }
+    }
+    #publications ul:not(.pub-list) {
       padding-left: 20px;
+    }
+    .pub-section {
+      margin-bottom: 32px;
+    }
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .pub-item {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .pub-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      line-height: 1.25;
+      color: #111827;
+      margin: 0 0 8px 0;
+      letter-spacing: 0.2px;
+    }
+    .pub-title a {
+      color: #111827;
+      border-bottom: 0;
+    }
+    .pub-title a:hover {
+      color: #1d4ed8;
+      border-bottom: 0;
+    }
+    .pub-meta {
+      margin-top: 2px;
+      color: #111827;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .pub-venue {
+      font-weight: 800;
+    }
+    .pub-authors {
+      margin-top: 6px;
+      color: #4b5563;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .pub-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      color: #111827;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      border-bottom: 0;
+    }
+    a.pub-badge:hover {
+      background: #e5e7eb;
+      border-color: #d1d5db;
+      color: #111827;
+      border-bottom: 0;
+    }
+    .pub-award {
+      background: #fffbeb;
+      border-color: #fde68a;
+      color: #92400e;
+      font-weight: 800;
     }
     .sidebar {
       background-color: #ffffff;
@@ -76,6 +190,79 @@
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
       border: 1px solid rgba(0,0,0,0.06);
+    }
+    @media (min-width: 992px) {
+      .sidebar {
+        position: sticky;
+        top: 72px;
+      }
+    }
+    .sidebar__name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      text-align: left;
+      margin: 0;
+      color: #111827;
+      letter-spacing: 0.2px;
+      text-transform: none;
+    }
+    .sidebar__meta {
+      margin-top: 14px;
+    }
+    .sidebar__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .sidebar__row:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+    .sidebar__label {
+      flex: 0 0 76px;
+      color: #6b7280;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 1.6;
+    }
+    .sidebar__value {
+      flex: 1;
+      min-width: 0;
+      color: #111827;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .sidebar__value a {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .sidebar__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .sidebar__pill {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      color: #1d4ed8;
+      font-size: 13px;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.3px;
+      border-bottom: 0;
+    }
+    .sidebar__pill:hover {
+      background: #dbeafe;
+      border-color: #bfdbfe;
+      color: #1e40af;
+      border-bottom: 0;
     }
     .footer {
       text-align: center;
@@ -113,13 +300,13 @@
   <div class="container">
     <div class="row">
       <!-- Main Section -->
-      <div class="col-md-8">
-        <img class="img-responsive" src="me.png" width="30%" alt="Profile Picture">
+      <main class="col-md-8">
+        <img class="img-responsive profile-pic" src="me.png" alt="Profile Picture">
         <div style="margin-top: 24px; padding: 20px; background-color: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);">
           <h3 style="margin-top: 0; margin-bottom: 16px; font-family: 'Oswald', sans-serif; color: #1a202c; font-weight: 600;">Highlights:</h3>
           <ul style="padding-left: 20px; margin-bottom: 0;">
-            <li>Now a Quantitative Associate at <a href="https://sescollc.com/">SESCO Enterprises</a>, researching electricity markets.</li>
-            <li>Completed my PhD in the <a href="https://theory.cis.upenn.edu/">Department of Computer and Information Science</a> at the University of Pennsylvania, advised by <a href="https://www.cis.upenn.edu/~kannan/">Sampath Kannan</a> and <a href="https://www.seas.upenn.edu/~anindyad/">Anindya De</a>.</li>
+            <li>June 2025: Started as a Quantitative Associate at <a href="https://sescollc.com/">SESCO Enterprises</a>, researching electricity markets.</li>
+            <li>June 2025: Completed my PhD in the <a href="https://theory.cis.upenn.edu/">Department of Computer and Information Science</a> at the University of Pennsylvania, advised by <a href="https://www.cis.upenn.edu/~kannan/">Sampath Kannan</a> and <a href="https://www.seas.upenn.edu/~anindyad/">Anindya De</a>.</li>
             <li>Research covered in <a href="https://www.quantamagazine.org/the-game-theory-of-how-algorithms-can-drive-up-prices-20251022/">Quanta Magazine</a>, reprinted in <a href="https://www.wired.com/story/game-theory-explains-how-algorithms-can-drive-up-prices/">WIRED</a>, and discussed on the <a href="https://podcasts.apple.com/us/podcast/game-theory-algorithms-and-high-prices/id1021340531?i=1000738312590">Quanta Podcast</a>.</li>
             <li>Best Paper and Best Student Paper, EC 2025, for “Swap Regret and Correlated Equilibria Beyond Normal-Form Games.”</li>
           </ul>
@@ -130,18 +317,44 @@
         <p style="text-align: justify;">
           My research was previously supported by <a href="https://www.amazon.science/news-and-features/amazon-provides-gift-to-10-penn-engineering-phd-students-for-work-on-trustworthy-ai">a gift from AWS AI for research in Trustworthy AI</a>.
         </p>
-      </div>
+      </main>
 
       <!-- Updated Sidebar Block with Improved Spacing -->
 <div class="col-md-4">
-  <div class="sidebar" style="margin-bottom: 20px;">
-    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; text-align: center; margin-bottom: 20px; color: #1a202c;">Eshwar Ram Arunachaleswaran</h2>
-    <p><strong>Email:</strong> eshwarram.arunachaleswaran@gmail.com</p>
-    <p><strong>Current:</strong> Quantitative Associate, <a href="https://sescollc.com/">SESCO Enterprises</a></p>
-    <p><strong>PhD:</strong> Computer and Information Science, University of Pennsylvania</p>
-    <dd><a href="https://scholar.google.com/citations?user=aXBGOt4AAAAJ&hl=en&oi=ao">Google Scholar</a></dd> 
-  </div>
+  <aside class="sidebar" style="margin-bottom: 20px;">
+    <h2 class="sidebar__name">Eshwar Ram Arunachaleswaran</h2>
+
+    <div class="sidebar__meta">
+      <div class="sidebar__row">
+        <div class="sidebar__label">Email</div>
+        <div class="sidebar__value">
+          <a href="mailto:eshwarram.arunachaleswaran@gmail.com" aria-label="Email Eshwar">
+            eshwarram.arunachaleswaran<wbr>@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar__row">
+        <div class="sidebar__label">Current</div>
+        <div class="sidebar__value">
+          Quantitative Associate, <a href="https://sescollc.com/">SESCO Enterprises</a>
+        </div>
+      </div>
+
+      <div class="sidebar__row">
+        <div class="sidebar__label">PhD</div>
+        <div class="sidebar__value">Computer and Information Science, University of Pennsylvania</div>
+      </div>
+    </div>
+
+    <div class="sidebar__links" aria-label="Profile links">
+      <a class="sidebar__pill" href="https://scholar.google.com/citations?user=zsW4DyAAAAAJ&hl=en&oi=ao">Google Scholar</a>
+      <a class="sidebar__pill" href="Eshwar_CV.pdf">CV</a>
+    </div>
+  </aside>
 </div>
+
+    </div>
 
 <!-- Publications -->
 <div class="row" id="publications" style="margin-top: 50px;">
@@ -150,112 +363,123 @@
     
     <!-- Online Learning and Repeated Games Section -->
     <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Online Learning and Repeated Games</h3>
-    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
-      <ul>
-        <li>
-          <a href="https://arxiv.org/abs/2206.07672">Swap Regret and Correlated Equilibria Beyond Normal-Form Games</a><br>
-          <strong>ACM Conference on Economics and Computation (EC) 2025</strong><br>
-          <span style="color: #b8860b; font-weight: bold; font-size: 18px;">Best Paper Award and Best Student Paper Award</span><br>
-          Eshwar Ram Arunachaleswaran, Natalie Collina, Yishay Mansour, Mehryar Mohri, Jon Schneider, Balasubramanian Sivan
+    <div class="pub-section">
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2206.07672">Swap Regret and Correlated Equilibria Beyond Normal-Form Games</a></div>
+          <div class="pub-meta"><span class="pub-venue">ACM Conference on Economics and Computation (EC) 2025</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Yishay Mansour, Mehryar Mohri, Jon Schneider, Balasubramanian Sivan</div>
+          <div class="pub-links">
+            <span class="pub-badge pub-award">Best Paper Award and Best Student Paper Award</span>
+          </div>
         </li>
-        <li>
-          <a href="https://arxiv.org/abs/2412.18297">Learning to Play Against Unknown Opponents</a><br> 
-          <strong>ACM Conference on Economics and Computation (EC) 2025</strong><br>
-          Eshwar Ram Arunachaleswaran, Natalie Collina, Jon Schneider
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2412.18297">Learning to Play Against Unknown Opponents</a></div>
+          <div class="pub-meta"><span class="pub-venue">ACM Conference on Economics and Computation (EC) 2025</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Jon Schneider</div>
         </li>
-        <li>
-          <a href="https://www.arxiv.org/abs/2409.03956">Algorithmic Collusion Without Threats</a><br> 
-          <strong>Innovations in Theoretical Computer Science (ITCS) 2025</strong><br>
-          Eshwar Ram Arunachaleswaran, Natalie Collina, Sampath Kannan, Aaron Roth, Juba Ziani
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://www.arxiv.org/abs/2409.03956">Algorithmic Collusion Without Threats</a></div>
+          <div class="pub-meta"><span class="pub-venue">Innovations in Theoretical Computer Science (ITCS) 2025</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Sampath Kannan, Aaron Roth, Juba Ziani</div>
         </li>
-        <li>
-          <a href="https://arxiv.org/abs/2402.11410">An Elementary Predictor Obtaining 2 
-          <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">&nbsp;T &nbsp;</span></span> Distance to Calibration</a><br> 
-          <strong>ACM-SIAM Symposium on Discrete Algorithms (SODA) 2025</strong><br>
-          Eshwar Ram Arunachaleswaran, Natalie Collina, Aaron Roth, Mirah Shi
+        <li class="pub-item">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2402.11410">An Elementary Predictor Obtaining 2
+            <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">&nbsp;T &nbsp;</span></span> Distance to Calibration</a>
+          </div>
+          <div class="pub-meta"><span class="pub-venue">ACM-SIAM Symposium on Discrete Algorithms (SODA) 2025</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Aaron Roth, Mirah Shi</div>
         </li>
-        <li>
-          <a href="https://arxiv.org/abs/2402.09549">Pareto-Optimal Algorithms for Learning in Games</a><br>
-          <strong>ACM Conference on Economics and Computation (EC) 2024</strong><br>
-          Eshwar Ram Arunachaleswaran, Natalie Collina, Jon Schneider<br>
-          <a href="pareto_slides.pdf">Talk Slides</a>
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2402.09549">Pareto-Optimal Algorithms for Learning in Games</a></div>
+          <div class="pub-meta"><span class="pub-venue">ACM Conference on Economics and Computation (EC) 2024</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Jon Schneider</div>
+          <div class="pub-links">
+            <a class="pub-badge" href="pareto_slides.pdf">Talk slides</a>
+          </div>
         </li>
-        <li>
-          <a href="https://arxiv.org/abs/2207.04192">Efficient Stackelberg Strategies for Finitely Repeated Games</a><br>
-          <strong>AAMAS 2023 (Full Paper)</strong><br>
-          Eshwar Ram Arunachaleswaran, Natalie Collina, Michael Kearns
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2207.04192">Efficient Stackelberg Strategies for Finitely Repeated Games</a></div>
+          <div class="pub-meta"><span class="pub-venue">AAMAS 2023 (Full Paper)</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Natalie Collina, Michael Kearns</div>
         </li>
       </ul>
     </div>
 
     <!-- Algorithmic Fairness and Machine Learning Section -->
     <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Algorithmic Fairness and Machine Learning</h3>
-    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
-      <ul>
-        <li>
-          <a href="https://arxiv.org/abs/2310.04652">Oracle Efficient Algorithms for Groupwise Regret</a><br>
-          <strong>ICLR 2024</strong><br>
-          Krishna Acharya, Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani
+    <div class="pub-section">
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2310.04652">Oracle Efficient Algorithms for Groupwise Regret</a></div>
+          <div class="pub-meta"><span class="pub-venue">ICLR 2024</span></div>
+          <div class="pub-authors">Krishna Acharya, Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani</div>
         </li>
-        <li>
-          <a href="https://arxiv.org/abs/2209.07375">Wealth Dynamics Over Generations: Analysis and Interventions</a><br>
-          <strong>SATML 2023</strong><br>
-          Krishna Acharya, Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2209.07375">Wealth Dynamics Over Generations: Analysis and Interventions</a></div>
+          <div class="pub-meta"><span class="pub-venue">SATML 2023</span></div>
+          <div class="pub-authors">Krishna Acharya, Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani</div>
         </li>
-        <li>
-          <a href="https://arxiv.org/abs/2002.06592">Pipeline Interventions</a><br>
-          <strong>ITCS 2021, Mathematics of Operations Research</strong><br>
-          Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2002.06592">Pipeline Interventions</a></div>
+          <div class="pub-meta"><span class="pub-venue">ITCS 2021, Mathematics of Operations Research</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Sampath Kannan, Aaron Roth, Juba Ziani</div>
         </li>
       </ul>
     </div>
 
     <!-- Fair Division and Equilibrium Computation Section -->
     <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Fair Division and Equilibrium Computation</h3>
-    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
-      <ul>
-        <li>
-          <a href="https://arxiv.org/abs/1807.04163">Fully polynomial-time approximation schemes for fair rent division</a><br>
-          <strong>SODA 2019, Mathematics of Operations Research</strong><br>
-          Eshwar Ram Arunachaleswaran, Siddharth Barman, Nidhi Rathi
+    <div class="pub-section">
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/1807.04163">Fully polynomial-time approximation schemes for fair rent division</a></div>
+          <div class="pub-meta"><span class="pub-venue">SODA 2019, Mathematics of Operations Research</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Siddharth Barman, Nidhi Rathi</div>
         </li>
-        <li>
-          <a href="https://arxiv.org/abs/1907.11019">Fair and efficient cake division with connected pieces</a><br>
-          <strong>WINE 2019</strong><br>
-          Eshwar Ram Arunachaleswaran, Siddharth Barman, Rachitesh Kumar, Nidhi Rathi
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/1907.11019">Fair and efficient cake division with connected pieces</a></div>
+          <div class="pub-meta"><span class="pub-venue">WINE 2019</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Siddharth Barman, Rachitesh Kumar, Nidhi Rathi</div>
         </li>
-        <li>
-          <a href="https://arxiv.org/abs/1811.10859">Fair Division with a Secretive Agent</a><br>
-          <strong>AAAI 2019</strong><br>
-          Eshwar Ram Arunachaleswaran, Siddharth Barman, Nidhi Rathi
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/1811.10859">Fair Division with a Secretive Agent</a></div>
+          <div class="pub-meta"><span class="pub-venue">AAAI 2019</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Siddharth Barman, Nidhi Rathi</div>
         </li>
       </ul>
     </div>
 
     <!-- Other Topics Section -->
     <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Other Topics</h3>
-    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
-      <ul>
-        <li>
-          <a href="https://arxiv.org/abs/2206.07672">Reconstructing Ultrametric Trees from Noisy Experiments</a><br>
-          <strong>ALT 2023</strong><br>
-          Eshwar Ram Arunachaleswaran, Anindya De, Sampath Kannan
+    <div class="pub-section">
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2206.07672">Reconstructing Ultrametric Trees from Noisy Experiments</a></div>
+          <div class="pub-meta"><span class="pub-venue">ALT 2023</span></div>
+          <div class="pub-authors">Eshwar Ram Arunachaleswaran, Anindya De, Sampath Kannan</div>
         </li>
       </ul>
     </div>
 
     <!-- Miscellaneous Section -->
     <h3 style="border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 32px; color: #1a202c; font-family: 'Oswald', sans-serif; font-weight: 600;">Miscellaneous</h3>
-    <div style="margin-bottom: 32px; padding: 20px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
-      <ul>
-        <li>
-          <a href="WPE II Report_Eshwar.pdf">Report on Prophet Inequalities with Limited Information</a>  
-          For PhD Qualifiers [<a href="wpe_ii_presentation final.pdf">Talk Slides</a>]
+    <div class="pub-section">
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-title"><a href="WPE II Report_Eshwar.pdf">Report on Prophet Inequalities with Limited Information</a></div>
+          <div class="pub-meta"><span class="pub-venue">PhD Qualifiers</span></div>
+          <div class="pub-links">
+            <a class="pub-badge" href="wpe_ii_presentation final.pdf">Talk slides</a>
+          </div>
         </li>
       </ul>
     </div>
   </div>
 </div>
+
+  </div>
 
 
 
